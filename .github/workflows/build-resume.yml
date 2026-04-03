@@ -1,0 +1,25 @@
+name: Build LaTeX Resume
+
+# This tells GitHub to run the action every time you push to the 'main' branch
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex # Ensure this matches your file name!
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Nicholas_Seah_Resume # This is what the downloaded zip file will be named
+          path: main.pdf

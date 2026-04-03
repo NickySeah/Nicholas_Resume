@@ -1,0 +1,28 @@
+# LaTeX Core Auxiliary Files
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fmt
+*.fot
+*.cb
+*.cb2
+
+# latexmk specific (the tool VS Code uses)
+*.fdb_latexmk
+
+# SyncTeX files (used for clicking between PDF and Code)
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+
+# Output Files
+*.pdf
+*.dvi
+*.ps
+
+# OS generated files
+.DS_Store
+Thumbs.db
