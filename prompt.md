@@ -81,3 +81,15 @@ Since I do not want any fabricated numbers, if quantitative data (like percentag
 Keep the strategic bolding on the key technologies and outcomes, and ensure the phrasing sounds like a mature, mid-level engineer rather than a junior listing tasks. 
 
 Please output the final revised LaTeX code for the Experience and Projects sections so I can apply the updates.
+
+---
+Please generate a professional `README.md` for this repository. This repo contains my ATS-friendly software engineering resume written in LaTeX, along with a GitHub Actions CI/CD pipeline that automatically compiles the PDF on every push.
+
+Please structure the README with the following sections:
+1. Title & Description: A clean title (e.g., "Nicholas Seah - Software Engineering Resume") and a brief explanation of the repo's purpose and automation.
+2. 🚀 Latest Release (Download): Clear instructions for a recruiter or visitor on how to download the most recently compiled PDF from the GitHub Actions "Artifacts" tab. 
+3. 🛠️ Local Development Setup: Step-by-step instructions on how to compile the resume locally. Include prerequisites (VS Code, LaTeX Workshop extension, MiKTeX/MacTeX, and Strawberry Perl for latexmk).
+4. ⚙️ CI/CD Pipeline: A brief explanation of how the GitHub Action (`build-resume.yml`) works under the hood to compile the LaTeX code using Ubuntu and upload the artifact.
+5. 📄 License/Usage: A brief note stating that others are welcome to use the LaTeX structure/format as a template, but should remove my personal data.
+
+Format the output in clean, standard Markdown using appropriate headers, bullet points, and code blocks for terminal commands.
