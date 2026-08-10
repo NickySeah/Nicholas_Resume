@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
@@ -19,7 +19,7 @@ jobs:
           root_file: main.tex # Ensure this matches your file name!
 
       - name: Upload PDF artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4.6.2
         with:
           name: Nicholas_Seah_Resume # This is what the downloaded zip file will be named
           path: main.pdf
