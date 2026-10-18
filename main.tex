@@ -1,12 +1,12 @@
-\documentclass[10pt, letterpaper]{article}
+\documentclass[10pt, a4paper]{article}
 
 % Layout: simple single-column flow for ATS and one-page density.
 \usepackage[
     ignoreheadfoot,
-    top=1.5 cm,
-    bottom=1.9 cm,
-    left=2.0 cm,
-    right=2.0 cm,
+    top=1.2 cm,
+    bottom=1.2 cm,
+    left=1.7 cm,
+    right=1.7 cm,
     footskip=0.8 cm
 ]{geometry}
 
@@ -68,7 +68,7 @@
 \begin{center}
     {\LARGE Nicholas Seah\par}
     \vspace{0.3em}
-    Singapore \textbar{} \href{mailto:nicholasseah02@gmail.com}{nicholasseah02@gmail.com} \textbar{} \href{tel:+6597662050}{+65 97662050} \textbar{} \href{https://www.nicholasseah.me/}{nicholasseah.me} \textbar{} \href{https://linkedin.com/in/nicholasseah}{linkedin.com/in/nicholasseah} \textbar{} \href{https://github.com/NickySeah}{github.com/NickySeah}
+    Singapore \textbar{} \href{mailto:nicholasseah02@gmail.com}{nicholasseah02@gmail.com} \textbar{} \href{tel:+6597662050}{+65 9766 2050} \textbar{} \href{https://www.nicholasseah.me/}{nicholasseah.me} \break \href{https://linkedin.com/in/nicholasseah}{linkedin.com/in/nicholasseah} \textbar{} \href{https://github.com/NickySeah}{github.com/NickySeah}
 \end{center}
 
 % \begin{center}
@@ -83,12 +83,13 @@
 
 \begin{resumeitemize}
     \item GPA: 3.53/4.0
-    \item Second Major in Tech and Business (Product Development); Relevant Coursework: Enterprise Solution Development, IT Solution Architecture, Generative AI with LLMs
+    \item Second Major in Tech and Business (Product Development)
+    \item Relevant Coursework: Enterprise Solution Development, IT Solution Architecture, Generative AI with Large Language Models (LLMs)
 \end{resumeitemize}
 
-\section{Experience}
+\section{Work Experience}
 
-\href{https://www.tech.gov.sg/}{\textbf{Software Engineer Intern, GovTech}} \hfill Jun 2026 -- Present
+\href{https://www.tech.gov.sg/}{\textbf{Software Engineer Intern, Government Technology Agency}} \hfill Jun 2026 -- Present
 
 \begin{resumeitemize}
     \item Built an API observability dashboard for 5 data producers across 20 APIs
@@ -97,9 +98,10 @@
         engineering support requests.
 
     \item Developed an administrative activity-log interface backed by DynamoDB audit records, enabling administrators to trace user actions and investigate platform activity.
-    \item Cut encrypted S3 data-source onboarding from 15 minute to 1 minute by
+    \item Cut encrypted S3 data-source onboarding from 15 minutes to 1 minute by
         automating KMS key-policy grants for AWS Glue Crawlers using AWS CDK
         and Lambda, eliminating a manual, error-prone configuration step.
+    \item Strengthened release quality for an 11-microservice AWS data governance platform by extending its 5-stage GitLab CI/CD pipeline to enforce SonarQube quality gates on the UAT branch and keeping parallel pytest/Jest/Vitest suites, SAST, and CDK synth checks passing across 3 language stacks.
 
 \end{resumeitemize}
 
@@ -109,23 +111,20 @@
     \item Reduced duplicated logic across 6 inbound/outbound .NET MVC
         interfaces by extracting shared validation and transformation
         components, simplifying maintenance and reducing regression risk for
-        future changes
+        future changes.
     \item Resolved 2 production defects in scheduled .NET batch jobs processing
-        1000 records daily by tracing failures across C\# application logic and
+        1,000 records daily by tracing failures across C\# application logic and
         SQL Server stored procedures, and validating fixes through formal change
         requests.
 
-    \item Identified gaps in developer onboarding and created a standardized setup guide covering local configuration and dependencies for incoming developers.
 \end{resumeitemize}
 
 \section{Projects}
 
-\textbf{\href{https://github.com/JabrielHo/CS301-PegasusCRM}{PegasusCRM - CRM Platform for UBS | TypeScript, AWS Amplify, Cognito, Lambda}}
+\textbf{\href{https://github.com/JabrielHo/CS301-PegasusCRM}{PegasusCRM - Customer Relationship Management (CRM) Platform for UBS | TypeScript, AWS Amplify, Cognito, Lambda}}
 
 \begin{resumeitemize}
-    \item Translated requirements from 3 UBS stakeholder sessions into technical
-        specifications and 15 sprint-ready tasks, delivering a CRM prototype with
-        4 core features that was presented to UBS stakeholders
+    \item Delivered a 4-feature CRM prototype presented to UBS stakeholders by translating requirements from 3 discovery sessions into technical specifications and 15 sprint-ready tasks.
     \item Built a TypeScript frontend with AWS Amplify and generated GraphQL types, enforcing typed API contracts between UI components and backend services.
     \item Implemented role-based API authorization using Cognito/OAuth 2.0 tokens and a Lambda authorizer that validated JWTs and user roles on each protected request.
 \end{resumeitemize}
@@ -144,22 +143,23 @@
 \textbf{\href{https://github.com/NickySeah/DutyNotFree}{DutyNotFree - Full-Stack Application | Spring Boot, JWT, MySQL}}
 
 \begin{resumeitemize}
-    \item Built a Spring Boot and MySQL backend with JWT authentication and 405 unit tests (95.4\% coverage) while leading a 5-member team through 5
-sprints to on-time delivery.
+    \item Led a 5-member team through 5 sprints to deliver a trade platform for tracking tariffs, exploring free trade agreements, and estimating shipment duties on schedule, owning sprint planning and code reviews. Built the Spring Boot/MySQL backend with JWT authentication and 405 automated tests, achieving 95.4\% line coverage.
 \end{resumeitemize}
 
 \section{Skills}
 
-\textbf{Languages:} C\#, Java, Python, TypeScript, JavaScript \\ 
+\textbf{Languages:} C\#, Java, TypeScript, JavaScript, Python, SQL \\ 
 
 \textbf{Frameworks:} .NET, Spring Boot, React, Next.js, Express \\
 
-\textbf{Cloud \& Infrastructure:}  AWS (Lambda, DynamoDB, S3, Glue, KMS, Cognito, Amplify, CDK), Docker, RabbitMQ, Kong \\
+\textbf{Cloud \& Infrastructure:}  AWS (Lambda, S3, Glue, KMS, Cognito, Amplify, CDK), Docker, RabbitMQ \\
 
 \textbf{Databases:} MySQL, SQL Server, MongoDB, DynamoDB, Supabase \\
 
+\textbf{DevOps \& Tools:} GitLab CI/CD, SonarQube, Docker, Kong, pytest, Jest, GraphQL
+
 \section{Certifications}
 
-\textbf{\href{https://www.credly.com/badges/95267b1a-fc80-4af4-b35b-1c865d6dc534/linked_in_profile}{AWS Certified Solutions Architect -- Associate}} \hfill Amazon Web Services
+\textbf{\href{https://www.credly.com/badges/95267b1a-fc80-4af4-b35b-1c865d6dc534/linked_in_profile}{AWS Certified Solutions Architect -- Associate}} \hfill Apr 2025 – Apr 2028
 
 \end{document}
